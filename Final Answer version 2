@@ -1,7 +1,10 @@
+###Bring MASS package from library####
+
+library(MASS)
+
 ####creating a special matrix object that can cache its inverse#######
 
 ###Creating special matrix object that could cache inverse###
-
 
 makeCacheMatrix <- function(x = matrix()) {
 
