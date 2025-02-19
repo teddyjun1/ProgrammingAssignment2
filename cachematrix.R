@@ -1,23 +1,26 @@
-
-makingCacheMatrix <- function(){
-        mat<-NULL
-        inverse_cache<- NULL
-
-        setMatrix<-function (x){
-                craig<<- x
-                inverse_cache<<-NULL
+MakeVector<- function (x=numeric()){
+        m<- NULL
+        set<- function (y){
+                x<<-y
+                m<<-NULL
         }
+        get<- function()x
+        setmanM-function(mean)m<<-mean
+        getmean<-function()m
+        list(set=set, get=get,
+             setmean=setmean,
+             getmean=getmean)
+}
 
-        getInverse<-function(){
-                if(is.null(inverse_cache){
-                  inverse_cache<<-solve(craig)
-                        }
-                inverse_cache
-        }
+cachemean<- functionn (x,...){
+    m<-x$getmean()
+    if (!is.null(m)){
+            message("getting cached data")
+            return(m)
+    }
 
-                   list(setMatrix= setMatrix, getInverse=getInverse)
-        }
-cacheSolve<- function (x, ..._{
-        inverse_cache<- x$getInverse()
-        inverse_cache
+    data<- x$get(()
+    m<- mean(data,...)
+    x$setmean(m)
+    m
 }
